@@ -1,4 +1,4 @@
-# laravel-dynamic-form
+# laravel-cart
 Laravel Cart
 git clone https://github.com/tintuelsarose/laravel-cart.git
 
