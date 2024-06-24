@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\GoogleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,3 +54,7 @@ Route::group(['middleware' => ['auth']], function () {
    Route::post('/add-shipping', [CartController::class, 'addShippingData'])->name('add-shippng');
    Route::get('/payment-view', [CartController::class, 'paymentView'])->name('payment.view');
    Route::get('/payment', [CartController::class, 'payment'])->name('payment');
+
+//Google Auth
+Route::get('auth/google', [GoogleController::class, 'signInwithGoogle']);
+Route::get('callback/google', [GoogleController::class, 'callbackToGoogle']);
